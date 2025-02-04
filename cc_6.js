@@ -97,3 +97,16 @@ let tracker = createExpenseTracker();
 tracker(200);
 tracker(150);
 tracker(100);
+
+//task 8: Recursion in JavScript
+
+//Using a recursive function determining year to reach level 10
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion(employeeLevel + 1);
+}
+//Test data
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`);
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`);
