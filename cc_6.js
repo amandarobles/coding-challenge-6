@@ -58,3 +58,14 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 //Test data
 calculateSubscriptionCost("Basic", 6, 10);
 calculateSubscriptionCost("Premium", 12, 0);
+
+// task 5: Returning Values
+
+//Using a function that returns the converted amount
+function convertCurrency(amount, exchangeRate) {
+    return (amount * exchangeRate).toFixed(2);
+}
+
+//Test data
+console.log(`Converted Amount: $${convertCurrency(100, 1.1)}`);
+console.log(`Converted Amount: $${convertCurrency(250, 0.85)}`);
