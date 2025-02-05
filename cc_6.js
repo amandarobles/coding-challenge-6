@@ -15,7 +15,7 @@ calculateProfit(50, 70, 200);
 //Calculating sales tax using function expression
 const calculateSalesTax = function(amount, taxRate) {
     let tax = amount * taxRate;
-    console.log(`Sales Tax: $ ${tax}`);
+    console.log(`Sales Tax: $${tax}`);
 };
 
 //Test data
@@ -83,22 +83,21 @@ console.log(applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : am
 // task 7: Closures
 
 //Creating a function that returns another function to add expenses and keeps running total
-functioncreateExpenseTracker () ;{
+function createExpenseTracker() {
     let totalExpenses = 0;
     
-    return function (expense){
+    return function(expense) {
         totalExpenses += expense;
         console.log(`Total Expenses: $${totalExpenses}`);
     };
 }
+
+// Test data
 let tracker = createExpenseTracker();
+console.log(tracker(200));
+console.log(tracker(150));
 
-//Test data
-tracker(200);
-tracker(150);
-tracker(100);
-
-//task 8: Recursion in JavScript
+//task 8: Recursion in JavaScript
 
 //Using a recursive function determining year to reach level 10
 function calculateYearsToPromotion(employeeLevel) {
